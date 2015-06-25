@@ -5,8 +5,8 @@ branches:
   only:
     - master
 before_deploy:
-  - git config --global user.email ${EMAIL}
-  - git config --global user.name ${NAME}
+  - git config --global user.email yushijinhun@gmail.com
+  - git config --global user.name yushijinhun
   - git tag ${VERSION_PREFIX}${TRAVIS_BUILD_NUMBER}
   - git push -q ${REPO} --tags
   - "cp ./build/libs/MCZHConverter.jar ./MCZHConverter-${VERSION_PREFIX}${TRAVIS_BUILD_NUMBER}.jar"
